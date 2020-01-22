@@ -1,0 +1,85 @@
+
+
+/* Colour scheme  #F8B195   #F67280   #C06C84   #6C5B7B   #355C7D */
+
+/* Global Styles */
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+	background-color: #355C7D;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+	font-family: 'Pacifico', cursive;
+	color: #F8B195;
+}
+
+h2 {
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	color: #355C7D;
+}
+
+form {
+	display: inline-block;
+}
+
+input {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	display: inline-block;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 2, 1fr;
+	grid-gap: 15px;
+	grid-auto-rows: minmax(300px, auto);
+	margin: 2%;
+}
+
+.col-1 {
+	grid-column: 1;
+	grid-row: 1;
+	background-color: #C06C84;
+	padding: 3%;
+	border-radius: 25px;
+	text-align: center;
+}
+
+.col-2 {
+	grid-columns: 1;
+	grid-row: 1;
+	background-color: #C06C84;
+	padding: 3%;
+	border-radius: 25px;
+	text-align: center;
+}
+
+.secondary-header {
+	font-family: 'Montserrat', sans-serif;
+	 
+}
+
+.main-header {
+	margin: 3%;  
+}
+
+#chat-history {
+	display: inline-block;
+	background-color: white;
+	width: 95%;
+	height: 200px;
+}
+
+#footer {
+	font-family: 'Pacifico', cursive;
+	margin: 3%;
+	color: #C06C84;
+}
+
