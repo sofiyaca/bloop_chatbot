@@ -17,6 +17,7 @@ body {
 h1 {
 	font-family: 'Pacifico', cursive;
 	color: #F8B195;
+	margin: 3%;
 }
 
 h2 {
@@ -27,6 +28,12 @@ h2 {
 
 form {
 	display: inline-block;
+	width: 95%;
+}
+
+textarea {
+	width: 95%;
+
 }
 
 input {
@@ -61,14 +68,56 @@ input {
 	text-align: center;
 }
 
-.secondary-header {
-	font-family: 'Montserrat', sans-serif;
-	 
+.bot-message {
+	position: relative;
+	padding: 15px;
+	margin: 1em 0 3em;
+	color: #000;
+	background: #6C5B7B;
+	border-radius: 10px;
+	background: linear-gradient(top, #f9d835, #f3961c);
 }
 
-.main-header {
-	margin: 3%;  
+.bot-message:after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -15px;
+	left: 50px;
+	width: 0;
+	border-width: 15px 15px 0;
+	border-style: solid;
+	border-color: #6C5B7B transparent;
 }
+
+.user-message {
+	position: relative;
+	padding: 15px;
+	margin: 1em 0 3em;
+	color: #000;
+	background: #F8B195;
+	border-radius: 10px;
+	background: linear-gradient(top, #f9d835, #f3961c);
+}
+
+.user-message:after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -15px;
+	right: 50px;
+	width: 0;
+	border-width: 15px 15px 0;
+	border-style: solid;
+	border-color: #F8B195 transparent;
+}
+
+.time {
+	color: #6C5B7B;
+	font-size: 0.7rem;
+	text-align: right;
+}
+
 
 #chat-history {
 	display: inline-block;
@@ -77,7 +126,7 @@ input {
 	height: 200px;
 }
 
-#footer {
+.footer {
 	font-family: 'Pacifico', cursive;
 	margin: 3%;
 	color: #C06C84;
