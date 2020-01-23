@@ -1,25 +1,65 @@
 
-
 $(document).ready(function() {
 
-	$("#chat-history").append("<div class=\"bot-message\">" 
-		+ "Hello, welcome to Bloop."+ "</div>");
+	const botInitialScript = ["Hello, I'm Bloop!", "I'm lonely, want to chat?"];
+	const botScript = ["Tell me about yourself.", "That's interesting!", "Tell me about your favourite hobbies?",
+	"Really? I like browsing Reddit too!", "You're a really interesting human. But I'm getting tired. Bye now!"];
+
+	for (let i = 0; i < botInitialScript.length; i++) {
+		writeBotMessage(botInitialScript[i]);
+	}
 
 
-    $("#send-message").click(function(){
+	let timeout = setTimeout(function(){ $("#chat-history").append("<div class=\"bot-message\">" 
+		+ "Are you still there?" + "</div>"); }, 30000);
 
-    	//Get text from user when they click "Send Message" button
-        var userMessage = $("textarea").val();
+	$("#send-message").click(function(){
 
-        //Get the date and add to message
-        var now = new Date();
-        var dateString = now.getHours() + ":" + (now.getMinutes()<10?'0':'') + now.getMinutes();
+		if (!$.trim($("textarea").val())) {
+			alert("Please send a nonempty message!");
+		}
 
-        //Print message to chat window with time
-        $("#chat-history").append("<div class=\"user-message\">" + userMessage + "<div class=\"time\">" 
-        	+ dateString + "</div>" + "</div>");
+		else {
+			let userMessage = $("textarea").val();
+			writeUserMessage(userMessage);
+			$("textarea").val("");
+			clearTimeout(timeout);
+		}
+		
 
-        $("textarea").val("");
 
-    }); 
+	}); 
 });
+
+function createTimeString () {
+	let now = new Date();
+	let timeString = now.getHours() + ":" + (now.getMinutes()<10?'0':'') + now.getMinutes();
+	return timeString
+};
+
+function writeBotMessage (botMessage) {
+	timeString = createTimeString();
+	$("#chat-history").append("<div class=\"bot-message\">" 
+		+ botMessage + "<div class=\"bot-time\">" 
+		+ timeString + "</div>" +"</div>");
+};
+
+function writeUserMessage (userMessage) {
+	timeString = createTimeString();
+	$("#chat-history").append("<div class=\"user-message\">" + userMessage + "<div class=\"user-time\">" 
+		+ timeString + "</div>" + "</div>");
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,8 +2,6 @@
 
 /* Colour scheme  #F8B195   #F67280   #C06C84   #6C5B7B   #355C7D */
 
-/* Global Styles */
-
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
   box-sizing: border-box;
@@ -71,11 +69,10 @@ input {
 .bot-message {
 	position: relative;
 	padding: 15px;
-	margin: 1em 0 3em;
+	margin: 0.5em 1em 1em 0;
 	color: #000;
 	background: #6C5B7B;
-	border-radius: 10px;
-	background: linear-gradient(top, #f9d835, #f3961c);
+	border-radius: 25px;
 }
 
 .bot-message:after {
@@ -93,11 +90,10 @@ input {
 .user-message {
 	position: relative;
 	padding: 15px;
-	margin: 1em 0 3em;
+	margin: 0.5em 0 1em 1em;
 	color: #000;
 	background: #F8B195;
-	border-radius: 10px;
-	background: linear-gradient(top, #f9d835, #f3961c);
+	border-radius: 25px;
 }
 
 .user-message:after {
@@ -112,18 +108,16 @@ input {
 	border-color: #F8B195 transparent;
 }
 
-.time {
-	color: #6C5B7B;
+.bot-time {
+	color: white;
 	font-size: 0.7rem;
-	text-align: right;
+	text-align: left;
 }
 
-
-#chat-history {
-	display: inline-block;
-	background-color: white;
-	width: 95%;
-	height: 200px;
+.user-time {
+	color: white;
+	font-size: 0.7rem;
+	text-align: right;
 }
 
 .footer {
@@ -131,4 +125,11 @@ input {
 	margin: 3%;
 	color: #C06C84;
 }
+
+#chat-history {
+	display: inline-block;
+	background-color: white;
+	width: 95%;
+}
+
 
