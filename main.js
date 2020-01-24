@@ -14,9 +14,14 @@ function writeBotMessage(botMessage) {
 
 function writeUserMessage(userMessage) {
 	let timeString = createTimeString();
-	$("#chat-history").append("<div class=\"message\" id=\"user-message\">" + userMessage + "<div class=\"user-time\">" 
+	$("#chat-history").append("<div class=\"message\" id=\"user-message\">" 
+		+ userMessage + "<div class=\"user-time\">" 
 		+ timeString + "</div>" + "</div>");
 };
+
+function scrollToBottom(containerIdString) {
+	$(containerIdString).animate({scrollTop: $(containerIdString).prop("scrollHeight")}, 'slow');
+}
 
 $(document).ready(function() {
 
@@ -44,12 +49,12 @@ $(document).ready(function() {
 			$("textarea").val("");
 			if (botCounter < 9) {
 				writeBotMessage(botScript[botCounter]);
-				$("#chat-history").animate({scrollTop: $("#chat-history").prop("scrollHeight")}, 'slow');
+				scrollToBottom("#chat-history");
 				botCounter++;
 			}
 			else {
 				writeBotMessage("Bloop has left the chat.");
-				$("#chat-history").animate({scrollTop: $("#chat-history").prop("scrollHeight")}, 'slow');
+				scrollToBottom("#chat-history");
 			}	
 		}
 	}); 

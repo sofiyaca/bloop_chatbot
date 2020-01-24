@@ -101,8 +101,17 @@ input {
 	color: #C06C84;
 }
 
+#send-message {
+	margin: 8px;
+	background-color: #F8B195;
+	border-radius: 25px;
+	border-style: none;
+	color: #355C7D;
+	font-family: 'Pacifico', cursive;
+}
+
 #bot-message {
-	margin: 0.5em 1em 1em 0;
+	margin: 0.5em 5em 1em 0.5em;
 	background: #6C5B7B;
 }
 
@@ -112,7 +121,7 @@ input {
 }
 
 #user-message {
-	margin: 0.5em 0 1em 1em;
+	margin: 0.5em 0.5em 1em 5em;
 	background: #F8B195;
 }
 
