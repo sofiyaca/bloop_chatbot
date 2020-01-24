@@ -42,7 +42,7 @@ input {
 
 .wrapper {
 	display: grid;
-	grid-template-columns: 2, 1fr;
+	grid-template-columns: 50% 50%;
 	grid-gap: 15px;
 	grid-auto-rows: minmax(300px, auto);
 	margin: 2%;
@@ -66,46 +66,21 @@ input {
 	text-align: center;
 }
 
-.bot-message {
+.message {
 	position: relative;
 	padding: 15px;
-	margin: 0.5em 1em 1em 0;
 	color: #000;
-	background: #6C5B7B;
 	border-radius: 25px;
 }
 
-.bot-message:after {
+.message:after {
 	content: "";
 	display: block;
 	position: absolute;
 	bottom: -15px;
-	left: 50px;
 	width: 0;
 	border-width: 15px 15px 0;
 	border-style: solid;
-	border-color: #6C5B7B transparent;
-}
-
-.user-message {
-	position: relative;
-	padding: 15px;
-	margin: 0.5em 0 1em 1em;
-	color: #000;
-	background: #F8B195;
-	border-radius: 25px;
-}
-
-.user-message:after {
-	content: "";
-	display: block;
-	position: absolute;
-	bottom: -15px;
-	right: 50px;
-	width: 0;
-	border-width: 15px 15px 0;
-	border-style: solid;
-	border-color: #F8B195 transparent;
 }
 
 .bot-time {
@@ -126,10 +101,32 @@ input {
 	color: #C06C84;
 }
 
+#bot-message {
+	margin: 0.5em 1em 1em 0;
+	background: #6C5B7B;
+}
+
+#bot-message:after {
+	left: 50px;
+	border-color: #6C5B7B transparent;
+}
+
+#user-message {
+	margin: 0.5em 0 1em 1em;
+	background: #F8B195;
+}
+
+#user-message:after {
+	right: 50px;
+	border-color: #F8B195 transparent;
+}
+
 #chat-history {
 	display: inline-block;
 	background-color: white;
 	width: 95%;
+	height: 400px;
+	overflow: scroll;
 }
 
 
